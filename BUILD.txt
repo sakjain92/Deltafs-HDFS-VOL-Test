@@ -1,0 +1,7 @@
+Use makefile directly
+
+Run deltafs server first: (From within deltafs build dir)
+mpirun -n 1 ./src/server/deltafs-srvr -v=1 -logtostderr
+
+Test with shell
+env DELTAFS_MetadataSrvAddrs="127.0.0.1:10101" DELTAFS_NumOfMetadataSrvs="1"     .//src/cmds/deltafs-shell -v=1 -logtostderr
